@@ -178,6 +178,114 @@ animate("c4",2);
 </script>
 
 </body>
+</html>/* WhatsApp Button */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:15px 18px;
+  border-radius:50%;
+  font-size:24px;
+  text-decoration:none;
+}
+
+/* LinkedIn Button */
+.linkedin{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  background:#0A66C2;
+  color:#fff;
+  padding:15px 18px;
+  border-radius:50%;
+  font-size:24px;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>GlobalTrade Exports</h1>
+  <p>Import & Export | Global Business | Trusted Growth</p>
+</header>
+
+<nav>
+  <a href="#about">About Us</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <div class="card">
+    <p>
+      GlobalTrade Exports is an emerging import‑export venture focused on
+      agricultural commodities and international trade learning.
+      Our mission is to grow into a reliable global trading company with
+      ethical and transparent practices.
+    </p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <h2 id="c1">0</h2>
+      <p>Countries Studied</p>
+    </div>
+    <div class="stat">
+      <h2 id="c2">0</h2>
+      <p>Trade Research</p>
+    </div>
+    <div class="stat">
+      <h2 id="c3">0</h2>
+      <p>Business Contacts</p>
+    </div>
+    <div class="stat">
+      <h2 id="c4">0</h2>
+      <p>Years Learning</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p><b>Name:</b> Akash Bhoyar</p>
+    <p><b>Email:</b> <a href="mailto:Bhoyaraakash074@gmail.com" style="color:#38bdf8;">Bhoyaraakash074@gmail.com</a></p>
+    <p><b>Phone:</b> <a href="tel:+919405547410" style="color:#38bdf8;">+91 9405547410</a></p>
+    <p><b>LinkedIn:</b> <a href="https://www.linkedin.com" style="color:#38bdf8;">Visit Profile</a></p>
+  </div>
+</section>
+
+<footer>
+© 2026 GlobalTrade Exports • Powered by GitHub Pages
+</footer>
+
+<!-- WhatsApp Button -->
+<a class="whatsapp" href="https://wa.me/919405547410" target="_blank">💬</a>
+
+<!-- LinkedIn Button -->
+<a class="linkedin" href="https://www.linkedin.com" target="_blank">in</a>
+
+<script>
+function animate(id,target){
+  let i=0;
+  const el=document.getElementById(id);
+  const step=setInterval(()=>{
+    i++;
+    el.innerText=i;
+    if(i>=target) clearInterval(step);
+  },30);
+}
+animate("c1",6);
+animate("c2",40);
+animate("c3",15);
+animate("c4",2);
+</script>
+
+</body>
 </html>  max-width:1000px;
   margin:auto;
 }
