@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Vidarbha Exports | EXIM Trade Intelligence</title>
+<title>Vidarbha Exports | Premium EXIM Intelligence</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
 :root{
  --bg:#020617;
- --card:#020617;
+ --glass:rgba(255,255,255,0.06);
+ --border:rgba(255,255,255,0.12);
  --accent:#38bdf8;
  --accent2:#22d3ee;
  --text:#e5e7eb;
@@ -19,37 +18,46 @@
 *{box-sizing:border-box}
 body{
  margin:0;
- font-family:'Segoe UI',Arial;
- background:linear-gradient(120deg,#020617,#020617);
+ font-family:Inter,Segoe UI,Arial;
+ background:radial-gradient(circle at top,#020617,#020617);
  color:var(--text);
 }
-header{
- padding:60px 20px;
+
+/* HERO */
+.hero{
+ padding:90px 20px;
  text-align:center;
 }
-header h1{
- font-size:48px;
+.hero h1{
+ font-size:56px;
  margin:0;
  background:linear-gradient(90deg,var(--accent),var(--accent2));
  -webkit-background-clip:text;
  color:transparent;
 }
-header p{color:#cbd5f5;font-size:18px}
+.hero p{
+ font-size:20px;
+ color:#cbd5f5;
+ margin-top:10px;
+}
 
+/* NAV */
 nav{
- position:sticky;top:0;z-index:10;
- background:#020617;
+ position:sticky;top:0;z-index:99;
+ backdrop-filter:blur(14px);
+ background:rgba(2,6,23,.6);
+ border-bottom:1px solid var(--border);
  display:flex;
  justify-content:center;
- gap:15px;
- padding:15px;
+ gap:14px;
+ padding:14px;
 }
 nav button{
- background:none;
- border:1px solid #1e293b;
+ background:var(--glass);
+ border:1px solid var(--border);
  color:var(--accent);
  padding:10px 18px;
- border-radius:20px;
+ border-radius:999px;
  cursor:pointer;
  transition:.3s;
 }
@@ -58,19 +66,209 @@ nav button:hover{
  color:#020617;
 }
 
-section{display:none;padding:50px 20px;max-width:1200px;margin:auto}
+/* SECTIONS */
+section{
+ display:none;
+ padding:60px 20px;
+ max-width:1200px;
+ margin:auto;
+}
 .active{display:block;animation:fade .6s}
-@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1}}
 
 .grid{
  display:grid;
  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
- gap:20px;
+ gap:24px;
 }
+
+/* GLASS CARD */
 .card{
- background:#020617;
- border:1px solid #1e293b;
+ background:var(--glass);
+ backdrop-filter:blur(20px);
+ border:1px solid var(--border);
+ padding:28px;
+ border-radius:22px;
+ box-shadow:0 30px 60px rgba(0,0,0,.4);
+ transition:.3s;
+}
+.card:hover{transform:translateY(-6px)}
+
+.stat{text-align:center}
+.stat h2{
+ font-size:46px;
+ margin:0;
+ color:var(--accent2);
+}
+
+/* TABLE */
+table{
+ width:100%;
+ border-collapse:collapse;
+ margin-top:20px;
+}
+th,td{
+ padding:14px;
+ border-bottom:1px solid var(--border);
+ text-align:center;
+}
+th{color:var(--accent)}
+tr:hover{background:rgba(255,255,255,.04)}
+
+/* FOOTER */
+footer{
+ text-align:center;
  padding:25px;
+ color:#94a3b8;
+ border-top:1px solid var(--border);
+ margin-top:40px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+ position:fixed;
+ right:22px;
+ bottom:22px;
+ background:#25D366;
+ color:#fff;
+ padding:18px 20px;
+ border-radius:50%;
+ font-size:22px;
+ text-decoration:none;
+ box-shadow:0 0 30px #25D366;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>Vidarbha Exports</h1>
+<p>Premium EXIM Trade Intelligence Platform</p>
+</div>
+
+<nav>
+<button onclick="show('home')">Overview</button>
+<button onclick="show('import')">Import</button>
+<button onclick="show('export')">Export</button>
+<button onclick="show('analytics')">Analytics</button>
+<button onclick="show('pricing')">Pricing</button>
+<button onclick="show('contact')">Contact</button>
+</nav>
+
+<section id="home" class="active">
+<div class="grid">
+ <div class="card stat"><h2 id="s1">0</h2><p>Countries Covered</p></div>
+ <div class="card stat"><h2 id="s2">0</h2><p>Trade Records</p></div>
+ <div class="card stat"><h2 id="s3">0</h2><p>Product Segments</p></div>
+ <div class="card stat"><h2 id="s4">0</h2><p>Business Leads</p></div>
+</div>
+
+<div class="card" style="margin-top:40px">
+<h2>About Vidarbha Exports</h2>
+<p>
+A **premium‑grade EXIM demo analytics platform** designed for
+learning, lead generation and professional client presentations.
+Built with modern UI principles inspired by global SAAS dashboards.
+</p>
+</div>
+</section>
+
+<section id="import">
+<div class="card">
+<h2>Import Intelligence</h2>
+<table>
+<tr><th>Country</th><th>Product</th><th>HS Code</th><th>Value (USD)</th></tr>
+<tr><td>India</td><td>Chemicals</td><td>2809</td><td>120,000</td></tr>
+<tr><td>USA</td><td>Agriculture</td><td>1001</td><td>95,000</td></tr>
+<tr><td>China</td><td>Chemicals</td><td>2902</td><td>210,000</td></tr>
+</table>
+</div>
+</section>
+
+<section id="export">
+<div class="card">
+<h2>Export Intelligence</h2>
+<table>
+<tr><th>Country</th><th>Product</th><th>HS Code</th><th>Value (USD)</th></tr>
+<tr><td>UAE</td><td>Agriculture</td><td>0713</td><td>80,000</td></tr>
+<tr><td>Vietnam</td><td>Chemicals</td><td>2811</td><td>65,000</td></tr>
+<tr><td>Sri Lanka</td><td>Agriculture</td><td>0901</td><td>50,000</td></tr>
+</table>
+</div>
+</section>
+
+<section id="analytics">
+<div class="grid">
+ <div class="card">
+  <h3>Import by Country</h3>
+  <canvas id="importChart"></canvas>
+ </div>
+ <div class="card">
+  <h3>Export by Country</h3>
+  <canvas id="exportChart"></canvas>
+ </div>
+</div>
+
+<div class="card" style="margin-top:30px">
+<h3>Product Share</h3>
+<canvas id="productChart"></canvas>
+</div>
+</section>
+
+<section id="pricing">
+<div class="grid">
+ <div class="card"><h3>Demo</h3><p>Free Access</p></div>
+ <div class="card"><h3>Professional</h3><p>₹4,999 / month</p></div>
+ <div class="card"><h3>Enterprise</h3><p>Custom Solution</p></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="card">
+<h2>Contact</h2>
+<p><b>Email:</b> <a style="color:var(--accent)" href="mailto:bhoyaraakash074@gmail.com">bhoyaraakash074@gmail.com</a></p>
+<p><b>WhatsApp:</b> <a style="color:var(--accent)" href="https://wa.me/919405547410">Chat Instantly</a></p>
+<p>Phone number is private.</p>
+</div>
+</section>
+
+<footer>
+© 2026 Vidarbha Exports • Premium EXIM Intelligence
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919405547410" target="_blank">💬</a>
+
+<script>
+function show(id){
+ document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+ document.getElementById(id).classList.add("active");
+}
+function count(id,target){
+ let i=0,el=document.getElementById(id);
+ let t=setInterval(()=>{i++;el.innerText=i;if(i>=target)clearInterval(t)},25);
+}
+count("s1",6);count("s2",150);count("s3",2);count("s4",30);
+
+new Chart(importChart,{
+ type:'bar',
+ data:{labels:['India','USA','China'],
+ datasets:[{data:[120,95,210],backgroundColor:'#38bdf8'}]}
+});
+new Chart(exportChart,{
+ type:'bar',
+ data:{labels:['UAE','Vietnam','Sri Lanka'],
+ datasets:[{data:[80,65,50],backgroundColor:'#22d3ee'}]}
+});
+new Chart(productChart,{
+ type:'doughnut',
+ data:{labels:['Agriculture','Chemicals'],
+ datasets:[{data:[55,45],backgroundColor:['#38bdf8','#22d3ee']}]}
+});
+</script>
+
+</body>
+</html> padding:25px;
  border-radius:18px;
  box-shadow:0 10px 30px rgba(0,0,0,.3);
 }
