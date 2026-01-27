@@ -1,76 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vidarbha Exports | Global Import Export</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Global Import–Export</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#0b0f19;color:#fff}
-
-/* NAVBAR */
-nav{
-display:flex;justify-content:space-between;align-items:center;
-padding:20px 60px;position:fixed;width:100%;
-background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);z-index:10}
-nav h1{font-weight:700;color:#00e5ff}
-nav ul{display:flex;gap:30px;list-style:none}
-nav a{text-decoration:none;color:#fff;font-weight:500}
-
-/* HERO */
-.hero{
-height:100vh;display:flex;align-items:center;justify-content:center;
-background:linear-gradient(120deg,#020617,#020617),url('https://images.unsplash.com/photo-1581092334651-ddf26d9b1f68') center/cover;
+:root{
+  --bg:#0b0b0f; --card:#12121a; --gold:#d4af37; --muted:#9aa0a6; --white:#fff;
 }
-.hero-content{text-align:center;max-width:800px}
-.hero h2{font-size:3rem;margin-bottom:20px}
-.hero p{opacity:0.85;margin-bottom:30px}
-.hero button{
-padding:15px 40px;border:none;border-radius:30px;
-background:#00e5ff;color:#000;font-size:1rem;font-weight:600;cursor:pointer}
-
-/* SECTIONS */
-section{padding:100px 60px}
-.section-title{text-align:center;font-size:2.2rem;margin-bottom:50px;color:#00e5ff}
-
-.grid{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px}
-
-/* CARDS */
-.card{
-background:#12182b;padding:30px;border-radius:20px;
-transition:0.3s}
-.card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,229,255,0.2)}
-.card h3{margin-bottom:15px;color:#00e5ff}
-
-/* CTA */
-.cta{
-background:linear-gradient(120deg,#00e5ff,#0077ff);
-color:#000;text-align:center;padding:80px 40px;border-radius:30px}
-.cta h2{margin-bottom:20px}
-.cta button{
-padding:15px 40px;border:none;border-radius:30px;
-background:#000;color:#fff;font-size:1rem}
-
-/* FOOTER */
-footer{text-align:center;padding:40px;opacity:0.6}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui;background:radial-gradient(1200px 600px at 10% -10%, #1b1b2a, transparent),var(--bg);color:var(--white)}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:auto;padding:24px}
+nav{position:sticky;top:0;background:rgba(11,11,15,.7);backdrop-filter:blur(10px);border-bottom:1px solid #1e1e2a;z-index:9}
+nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;letter-spacing:.5px}
+.brand span{color:var(--gold)}
+.menu a{margin-left:18px;color:#cfd3ff}
+.hero{padding:96px 0}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+.kicker{color:var(--gold);letter-spacing:.2em;font-size:12px}
+h1{font-size:48px;line-height:1.05;margin:12px 0}
+.lead{color:var(--muted);max-width:560px}
+.cta{display:flex;gap:12px;margin-top:28px}
+.btn{padding:14px 20px;border-radius:10px;border:1px solid #2a2a3a;background:#151520}
+.btn.primary{background:linear-gradient(135deg,#f0d36a,#b8931e);color:#0b0b0f;border:none;font-weight:700}
+.card{background:linear-gradient(180deg,#141422,#0f0f18);border:1px solid #222236;border-radius:18px;padding:22px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.stat b{font-size:28px;color:var(--gold)}
+.section{padding:72px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.item{transition:.3s}
+.item:hover{transform:translateY(-6px)}
+.badge{display:inline-block;border:1px solid #2a2a3a;border-radius:999px;padding:6px 10px;color:#cfd3ff}
+.footer{border-top:1px solid #1e1e2a;padding:28px;color:#9aa0a6}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  h1{font-size:36px}
+  .grid,.stats{grid-template-columns:1fr}
+}
 </style>
 </head>
-
 <body>
 
 <nav>
-<h1>Vidarbha Exports</h1>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#markets">Markets</a></li>
-<li><a href="#products">Products</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+  <div class="container wrap">
+    <div class="brand">AKASH <span>EXPORTS</span></div>
+    <div class="menu">
+      <a href="#markets">Markets</a>
+      <a href="#products">Products</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">GLOBAL • TRUSTED • FAST</div>
+      <h1>Serious Import–Export.<br/>Global Buyers. Zero Noise.</h1>
+      <p class="lead">We connect verified suppliers with international buyers across Asia, Europe & Middle East—clean compliance, reliable logistics.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Get a Quote</a>
+        <a class="btn" href="#process">How it Works</a>
+      </div>
+      <div class="stats">
+        <div class="card stat"><b>20+</b><div>Countries</div></div>
+        <div class="card stat"><b>50+</b><div>Products</div></div>
+        <div class="card stat"><b>100%</b><div>Compliance</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <span class="badge">Premium • Dark • Gold</span>
+      <h3>Why Buyers Trust Us</h3>
+      <ul>
+        <li>Verified suppliers & QC</li>
+        <li>Clear documentation</li>
+        <li>On‑time shipments</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="markets" class="section">
+  <div class="container">
+    <h2>Markets</h2>
+    <div class="grid">
+      <div class="card item">Europe</div>
+      <div class="card item">Middle East</div>
+      <div class="card item">South‑East Asia</div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="section">
+  <div class="container">
+    <h2>Products</h2>
+    <div class="grid">
+      <div class="card item">Agri Commodities</div>
+      <div class="card item">Chemicals</div>
+      <div class="card item">Pharma Raw</div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="section">
+  <div class="container grid">
+    <div class="card">1. Requirement</div>
+    <div class="card">2. Sourcing & QC</div>
+    <div class="card">3. Shipping</div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container card">
+    <h2>Contact</h2>
+    <p>Email: sales@akashexports.com</p>
+    <p>WhatsApp: +91‑XXXXXXXXXX</p>
+  </div>
+</section>
+
+<footer class="footer container">© 2026 Akash Exports. All rights reserved.</footer>
+</body>
+</html></ul>
 </nav>
 
 <!-- HERO -->
